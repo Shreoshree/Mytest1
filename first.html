@@ -1,0 +1,128 @@
+
+  
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Bootstrap Example</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+  <style>
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+
+    .row.content {height: 1500px}
+
+    
+
+    /* Set gray background color and 100% height */
+
+    .sidenav {
+
+      background-color: #f1f1f1;
+
+      height: 100%;
+
+    }
+    </style>
+    </head>
+    <body>
+    <div class="ng-view"></div>
+    <div class="container">
+        <header class="page-header">
+          <ul class="nav nav-pills pull-right">
+            <li class="active" id="123"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="1p.html">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+          </ul>
+          <div class="media">
+  <div class="media-left">
+    <img src="forum.jpg" class="media-object" style="width:100px">
+  </div>
+  <body ng-app="myApp">
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm",
+    })
+    .when("/first.html#", {
+        templateUrl : "Home.htm",
+        controller : "londonCtrl"
+    })
+    .when("/", {
+        templateUrl : "paris.htm",
+        controller : "parisCtrl"
+    });
+});
+app.controller("londonCtrl", function ($scope) {
+    $scope.msg = "It is a online based platform to share data";
+});
+app.controller("parisCtrl", function ($scope) {
+    $scope.msg = "I love Paris";
+});
+
+</script>
+
+
+
+
+
+  <div class="media-body">
+        </header>
+        </div><!--End Navbar -->
+<div class="container">
+  
+  <div class="container">
+  <h2>Online Forum</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" required="">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+
+</body>
+
+
+    
+
+  
+<style>
+    footer {
+
+      background-color: #555;
+
+      color: white;
+
+      padding: 15px;
+      }
+</style>
